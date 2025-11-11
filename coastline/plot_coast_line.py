@@ -1,3 +1,6 @@
+#%%
+!pip install geopy pandas folium
+#%%
 import pandas as pd
 from geopy.geocoders import Nominatim
 import folium
@@ -83,7 +86,7 @@ if not success_df.empty:
         ).add_to(m)
 
     # 6. 地図をHTMLファイルとして保存
-    output_html = '/content/drive/city_locations_map.html'
+    output_html = 'city_locations_map.html'
     m.save(output_html)
     print("\n-----------------------------------------------------")
     print(f"🎉 処理完了! 地図ファイルが '{output_html}' として保存されました。")
@@ -97,3 +100,4 @@ if failed_addresses:
     print("\n--- 検索に失敗した住所 ---")
     for addr in failed_addresses:
         print(f"- {addr}")
+# %%
