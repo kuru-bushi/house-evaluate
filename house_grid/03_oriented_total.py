@@ -1,6 +1,8 @@
 import numpy as np
 import trimesh
 
+
+
 def align_points_to_axis(points, mesh=None, obb=None, target_axis='x'):
     """
     points: (N,3) numpy array (点群)
